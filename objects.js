@@ -17,7 +17,7 @@ places.forEach((element,i) => {
 });
 
 // console.log(places)
-//map function 
+//map function used to filter element from array
 let maparray=places.map((element)=>{
     if(typeof element ==='string'){
         return element.toUpperCase();
@@ -28,3 +28,16 @@ let maparray=places.map((element)=>{
 })
 
 console.log(maparray);
+
+let filterArray=places.filter((places)=>{
+    if(places.length>6){
+        return true;
+    }
+})
+console.log("here I am ",filterArray);
+
+// find () funtion 
+function findcity(city) {
+    return city==='pune';
+  }
+console.log(places.find(findcity))
